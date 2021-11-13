@@ -10,7 +10,7 @@ https://blog.jinlife.com/index.php/archives/49/
 
 # Use it at your own risk, you might lose data with this patch.
 
-1. Download this file and upload to home folder in Synology
+1. Download libsynophoto-plugin-model.so and upload to home folder in Synology
 2. SSH connect to Synology and input below command to patch the file.
 ```bash
 cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/ 
