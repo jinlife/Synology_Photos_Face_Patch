@@ -2,8 +2,8 @@
 
 #include <stdio.h>
 
-long long _ZN9synophoto6plugin7network9IeNetwork11IsSupportedEv(void) {
-    printf("__int64 __fastcall synophoto::plugin::network::IeNetwork::IsSupported(synophoto::plugin::network::IeNetwork *this) return 0\n");
+long long _ZN9synophoto6plugin7network9IeNetwork11IsSupportedEv() {
+    printf("__int64 __fastcall synophoto::plugin::network::IeNetwork::IsSupported() return 0\n");
     return 0LL;
 }
 
