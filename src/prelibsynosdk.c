@@ -1,4 +1,4 @@
-// libsynosdk.so.7
+// /usr/lib/libsynosdk.so.7
 
 #include <stdio.h>
 #include <stdbool.h>

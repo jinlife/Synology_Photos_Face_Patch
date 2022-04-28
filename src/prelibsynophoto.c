@@ -1,4 +1,4 @@
-// libsynophoto-plugin-model.so
+// /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
 
 #include <stdio.h>
 

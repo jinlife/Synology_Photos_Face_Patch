@@ -1,14 +1,12 @@
 name: CI
 
 on:
-  push:
-    branches: [ master ]
   workflow_dispatch:
 
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - name: Check out the repo
@@ -25,8 +23,8 @@ jobs:
       - name: Compile
         working-directory: ./src
         run: |
-            gcc -fPIC -shared -o prelibsynophoto.so prelibsynophoto.c
-            gcc -fPIC -shared -o prelibsynosdk.so prelibsynosdk.c
+            gcc -s -fPIC -shared -o prelibsynophoto.so prelibsynophoto.c
+            gcc -s -fPIC -shared -o prelibsynosdk.so prelibsynosdk.c
         
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
