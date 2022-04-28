@@ -4,7 +4,7 @@ Synology Photos Facial Recognition Patch
 ## Here is my Chinese blog to show how to patch
 https://blog.jinlife.com/index.php/archives/49/  
 
-1. This patch will ignore GPU and let DS918+ to have facial recognization function in Synology Photos
+1. This patch will ignore GPU and let DS918+ to have facial recognization function in Synology Photos.
 2. DS3615xs might need this patch and it depends on CPU.
 3. DS918+ might need this patch and it depends on CPU and GPU, I would strongly recommend to use GPU if it works.
 
