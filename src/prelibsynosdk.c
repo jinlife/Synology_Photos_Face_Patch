@@ -9,5 +9,5 @@ bool SYNOFSIsRemoteFS(int a1) {
 }
 
 __attribute__((constructor)) void main() {
-    printf("module inject success\n");
+    printf("module inject libsynosdk success\n");
 }
