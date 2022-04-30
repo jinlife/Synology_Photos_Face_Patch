@@ -33,8 +33,7 @@ jobs:
             strip -s prelibsynosdk.so
             mv prelibsynophoto.so x86/prelibsynophoto.so
             mv prelibsynosdk.so x86/prelibsynosdk.so
-            cd ..
-            cd ..
+            cd ../../
             cp -r ./repo ./repoPatch
             
       - name: Patch
