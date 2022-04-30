@@ -39,8 +39,9 @@ jobs:
             
       - name: Patch
         run: |
+            cd repoPatch
             sudo chmod -R 777 ./
-            cd ./repoPatch/lazy
+            cd lazy
             sudo ./auto_patch.sh "DS920+" "${SYNO_VERSION}" "${PHOTO_VERSION}"            
             cd ../../
             sudo cp -v ./repoPatch/libsynophoto-plugin-model.so ./repo/libsynophoto-plugin-model.so
