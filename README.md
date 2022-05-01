@@ -26,7 +26,7 @@ The patch for libsynosdk.so.7 will allow remote NFS/CIFS shared folder be used i
 cp /volume1/homes/jinlife/libsynosdk.so.7 /usr/lib/
 ```
 ### Note: 
-It has side effect for FileStation that you cannot eject the folder anymore, it will be treated as local folder, however you can still umount it.
-For Photos, it will work perfectly in Shared folder: photo. But you cannot delete picture in personal homes folder. However, you can delete it in FileStation, but it is still inconvienient.
-Maybe you can upload photo by App "DS File", it can specify the uploaded folder out of homes.
-Anyway, I would suggest to use it for VideoStation only.
+1. It has side effect for FileStation that you cannot eject the folder anymore, it will be treated as local folder, however you can still umount it.
+2. For Photos, it will work perfectly in Shared folder: photo. But you cannot delete picture in personal homes folder. However, you can delete it in FileStation, but it is still inconvienient.
+3. Maybe you can upload photo by App "DS File", it can specify the uploaded folder out of homes.
+4. Anyway, I would suggest to use it for VideoStation only.
