@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [[ ! -e PatchELFSharp || ! -s PatchELFSharp ]];then
-	wget https://raw.githubusercontent.com/jinlife/Synology_Photos_Face_Patch/Test/bin/PatchELFSharp-Linux64/PatchELFSharp -O PatchELFSharp
+	wget https://raw.githubusercontent.com/jinlife/Synology_Photos_Face_Patch/main/bin/PatchELFSharp-Linux64/PatchELFSharp -O PatchELFSharp
 	if [[ ! -e PatchELFSharp || ! -s PatchELFSharp ]];then
 		echo "download failed"
 		exit

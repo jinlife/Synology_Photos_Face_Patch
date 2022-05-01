@@ -4,9 +4,10 @@ Run patch.sh in your Synology folder.
 ## Or
 Download the windows exe and run it in windows command line.
 
+Refer to last two lines:
 ```
 if [[ ! -e PatchELFSharp || ! -s PatchELFSharp ]];then
-	wget https://raw.githubusercontent.com/jinlife/Synology_Photos_Face_Patch/Test/bin/PatchELFSharp-Linux64/PatchELFSharp -O PatchELFSharp
+	wget https://raw.githubusercontent.com/jinlife/Synology_Photos_Face_Patch/main/bin/PatchELFSharp-Linux64/PatchELFSharp -O PatchELFSharp
 	if [[ ! -e PatchELFSharp || ! -s PatchELFSharp ]];then
 		echo "download failed"
 		exit
