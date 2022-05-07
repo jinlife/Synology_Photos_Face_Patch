@@ -72,7 +72,7 @@ jobs:
         with:
           draft: false
           prerelease: true
-          tag_name: "Patch SYNO V${SYNO_VERSION} and Photos V${{ PHOTO_VERSION }}"
+          tag_name: "Patch SYNO V${env.SYNO_VERSION} and Photos V${{ env.PHOTO_VERSION }}"
           files: |
             ./repo/libsynosdk.so.7
             ./repo/libsynophoto-plugin-model.so
