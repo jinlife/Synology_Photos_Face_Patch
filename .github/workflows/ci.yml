@@ -67,11 +67,9 @@ jobs:
           
       - name: Upload Release
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           draft: false
-          prerelease: true
+          prerelease: false
           body: "Synology V${{ env.SYNO_VERSION }} and Synology Photos V${{ env.PHOTO_VERSION }} only"
           name: "Patch SYNO V${{ env.SYNO_VERSION }} and Photos V${{ env.PHOTO_VERSION }}"
           tag_name: "${{ env.PHOTO_VERSION }}"
