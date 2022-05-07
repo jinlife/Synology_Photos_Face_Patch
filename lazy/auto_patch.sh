@@ -19,9 +19,10 @@ cp -v ../usr/lib/libcurl.so.4 ../usr/lib/libmbedcrypto.so.5 ../usr/lib/libmbedtl
 ln -s scemd syno_extract_system_patch
 
 # Extract pat file
-pat_address="https://global.download.synology.com/download/DSM/release/7.1/"${os_version}"/DSM_"${dsmodel}"_"${os_version}".pat"
+pat_address="https://global.download.synology.com/download/DSM/release/7.1/"${os_version}"-1/DSM_"${dsmodel}"_"${os_version}".pat"
 echo ${pat_address}
 #https://global.download.synology.com/download/DSM/release/7.1/42661/DSM_DS920+_42661.pat
+#https://cndl.synology.cn/download/DSM/release/7.1/42661-1/DSM_DS920%2B_42661.pat
 curl --location  ${pat_address} --output ${os_version}.pat
 
 sudo LD_LIBRARY_PATH=. ./syno_extract_system_patch ${os_version}.pat output-pat
