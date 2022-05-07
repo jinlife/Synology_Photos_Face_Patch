@@ -25,9 +25,11 @@ echo ${pat_address}
 #https://cndl.synology.cn/download/DSM/release/7.1/42661-1/DSM_DS920%2B_42661.pat
 curl --location  ${pat_address} --output ${os_version}.pat
 
-if [[ ! -e ${os_version}.pat || ! -s ${os_version}.pat ]];then
-	echo "Download ${os_version}.pat failed"
-	exit -1
+if [ $? -eq 0 ]; then
+	echo "Download ${os_version}.pat Success"
+else
+	echo "Download ${os_version}.pat failed $?"
+	exit
 fi
 
 sudo LD_LIBRARY_PATH=. ./syno_extract_system_patch ${os_version}.pat output-pat
