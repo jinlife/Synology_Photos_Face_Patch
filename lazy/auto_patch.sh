@@ -2,10 +2,12 @@
 
 # DS920+
 dsmodel=$1
+# 7.1
+os_main_version=$2
 # 42661
-os_version=$2
+os_version=$3
 # 1.2.0-0263
-photo_version=$3
+photo_version=$4
 
 # download old pat for syno_extract_system_patch # thanks for jumkey's idea.
 mkdir synoesp
@@ -21,18 +23,22 @@ ln -s scemd syno_extract_system_patch
 # Extract pat file
 #https://global.download.synology.com/download/DSM/release/7.1/42661/DSM_DS920+_42661.pat
 #https://cndl.synology.cn/download/DSM/release/7.1/42661-1/DSM_DS920%2B_42661.pat
-pat_address="https://global.download.synology.com/download/DSM/release/7.1/"${os_version}"/DSM_"${dsmodel}"_"${os_version}".pat"
+pat_address="https://global.download.synology.com/download/DSM/release/"${os_main_version}"/"${os_version}"/DSM_"${dsmodel}"_"${os_version}".pat"
 echo ${pat_address}
 curl --location  ${pat_address} --output ${os_version}.pat
 
-if [ $? -eq 0 ]; then
+filesize=`ls -l ${os_version}.pat | awk '{ print $5 }'`
+minimalsize=$((100*1024*1024))  #100MB
+
+if [ $filesize -gt $minimalsize ]; then
 	echo "Download ${os_version}.pat Success"
 else
 	echo "try again with ${os_version}-1 folder"
-    pat_address="https://global.download.synology.com/download/DSM/release/7.1/"${os_version}"-1/DSM_"${dsmodel}"_"${os_version}".pat"
+    pat_address="https://global.download.synology.com/download/DSM/release/"${os_main_version}"/"${os_version}"-1/DSM_"${dsmodel}"_"${os_version}".pat"
 	echo ${pat_address}
 	curl --location  ${pat_address} --output ${os_version}.pat
-	if [ $? -eq 0 ]; then
+	filesize=`ls -l ${os_version}.pat | awk '{ print $5 }'`
+	if [ $filesize -gt $minimalsize ]; then
 		echo "Download ${os_version}.pat Success"
 	else
 		echo "Download ${os_version}.pat failed $?"

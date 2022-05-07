@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     env:
+      SYNO_MAIN_VERSION: 7.1
       SYNO_VERSION: 42661
       PHOTO_VERSION: 1.2.0-0263
 
@@ -41,7 +42,7 @@ jobs:
             cd repoPatch
             sudo chmod -R 777 ./
             cd lazy
-            sudo ./auto_patch.sh "DS920+" "${SYNO_VERSION}" "${PHOTO_VERSION}"            
+            sudo ./auto_patch.sh "DS920+" "${SYNO_MAIN_VERSION}" "${SYNO_VERSION}" "${PHOTO_VERSION}"            
             cd ../../
             sudo cp -v ./repoPatch/libsynophoto-plugin-model.so ./repo/libsynophoto-plugin-model.so
             sudo cp -v ./repoPatch/libsynosdk.so.7 ./repo/libsynosdk.so.7
