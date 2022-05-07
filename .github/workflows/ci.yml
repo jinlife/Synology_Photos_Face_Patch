@@ -64,3 +64,15 @@ jobs:
         with:
           retain_days: 1
           keep_minimum_runs: 3
+          
+      - name: Upload Release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          draft: false
+          prerelease: true
+          tag_name: "Patch SYNO V${SYNO_VERSION} and Photos V${{ PHOTO_VERSION }}"
+          files: |
+            ./repo/libsynosdk.so.7
+            ./repo/libsynophoto-plugin-model.so
