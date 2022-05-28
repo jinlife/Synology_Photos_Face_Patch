@@ -1,9 +1,6 @@
 # Synology_Photos_Face_Patch
 Synology Photos Facial Recognition Patch
 
-## Here is my Chinese blog to show how to patch
-https://blog.jinlife.com/index.php/archives/49/  
-
 1. This patch will ignore GPU and let DS918+ to have facial recognization function in Synology Photos.
 2. DS3615xs might need this patch and it depends on CPU.
 3. DS918+ might need this patch and it depends on CPU and GPU, I would strongly recommend to use GPU if it works.
@@ -16,9 +13,6 @@ https://blog.jinlife.com/index.php/archives/49/
 ```bash
 cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/ 
 ```
-
-Release notes for Synology Photos  
-https://www.synology.com/en-global/releaseNote/SynologyPhotos
 
 ## Misc (libsynosdk.so.7)
 The patch for libsynosdk.so.7 will allow remote NFS/CIFS shared folder be used in VideoStation, AudioStation and Photos etc.

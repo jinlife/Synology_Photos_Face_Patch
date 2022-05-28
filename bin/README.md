@@ -1,4 +1,4 @@
-# Hack by yourself
+# Patch by yourself
 
 Run patch.sh in your Synology folder.
 ## Or
