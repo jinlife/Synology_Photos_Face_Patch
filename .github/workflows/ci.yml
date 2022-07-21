@@ -10,7 +10,7 @@ jobs:
     env:
       SYNO_MAIN_VERSION: 7.1
       SYNO_VERSION: 42661
-      PHOTO_VERSION: 1.2.0-0263
+      PHOTO_VERSION: 1.3.0-0317
 
     steps:
       - name: Check out the repo
