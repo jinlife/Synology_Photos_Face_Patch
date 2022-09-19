@@ -11,8 +11,8 @@ cd synoesp
 
 output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1)
 ls
-echo "usr"
-ls ./usr
+echo "show usr syno"
+ls ./usr/syno/
 echo "Start to extract synoarchive"
 mkdir extract && cd extract
 #ls
