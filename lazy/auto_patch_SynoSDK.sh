@@ -58,6 +58,11 @@ cp -v ./hda1Extract/usr/lib/libsynosdk.so.7 ../../../../
 
 cd ../../../../
 
+echo "find PatchELFSharp"
+ls ../
+echo "find PatchELFSharp2"
+ls ../bin
+
 ../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynosdk.so.7" "SYNOFSIsRemoteFS" "B8 00 00 00 00 C3"
 
 cp -v libsynosdk.so.7 ../libsynosdk.so.7
