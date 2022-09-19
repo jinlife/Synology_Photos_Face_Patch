@@ -54,9 +54,9 @@ tar -C hda1Extract -xf hda1.tgz
 echo "hda1 in"
 #ls
 echo "cp file libsynosdk.so.7"
-cp -v ./hda1Extract/usr/lib/libsynosdk.so.7 ../../../../
+cp -v ./hda1Extract/usr/lib/libsynosdk.so.7 ../../../
 
-cd ../../../../
+cd ../../../
 
 echo "find PatchELFSharp"
 ls ../
