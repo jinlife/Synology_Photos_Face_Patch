@@ -10,9 +10,11 @@ tar -C ./synoesp/ -xf oldpat.tar.gz rd.gz
 cd synoesp
 
 output=$(xz -dc < rd.gz 2>/dev/null | cpio -idm 2>&1)
-#ls
+ls
+echo "usr"
+ls ./usr
 echo "Start to extract synoarchive"
-mkdir hda1Extract && cd hda1Extract
+mkdir extract && cd extract
 #ls
 echo "cp file synoarchive"
 cp -v ../usr/syno/sbin/synoarchive ./
