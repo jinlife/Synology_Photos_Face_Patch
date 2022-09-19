@@ -1,4 +1,4 @@
-name: CI
+name: CI Photos
 
 on:
   workflow_dispatch:
