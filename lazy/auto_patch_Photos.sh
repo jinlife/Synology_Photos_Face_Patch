@@ -34,9 +34,9 @@ echo "Extract packages"
 mkdir package
 tar -C package -xf package.tgz
 #ls package
-cp -v ./package/usr/lib/libsynophoto-plugin-model.so ../../../../
+cp -v ./package/usr/lib/libsynophoto-plugin-model.so ../../
 
-cd ../../../../
+cd ../../
 
 echo "find PatchELFSharp"
 ls ../
