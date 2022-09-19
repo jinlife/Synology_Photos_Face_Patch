@@ -38,5 +38,9 @@ cp -v ./package/usr/lib/libsynophoto-plugin-model.so ../../../../../
 
 cd ../../../../../
 
+echo "find PatchELFSharp"
+ls ../
+echo "find PatchELFSharp2"
+ls ../bin
 ../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-model.so" "_ZN9synophoto6plugin7network9IeNetwork11IsSupportedEv" "B8 00 00 00 00 C3"
 cp -v libsynophoto-plugin-model.so ../libsynophoto-plugin-model.so
