@@ -1,4 +1,4 @@
-    name: CI SynoSDK
+name: CI SynoSDK
 
 on:
   workflow_dispatch:
