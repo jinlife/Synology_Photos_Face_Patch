@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-18.04
+    env:
+      PHOTO_VERSION: 1.3.0-0317
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+        with:
+            ref: main
+            path: './repo'
+       
+      - name: Copy
+        working-directory: ./repo/src
+        run: |
+            cd ../../
+            cp -r ./repo ./repoPatch
+            
+      - name: Patch
+        run: |
+            cd repoPatch
+            sudo chmod -R 777 ./
+            cd lazy
+            sudo ./auto_patch_Photos.sh "${PHOTO_VERSION}"            
+            cd ../../
+            sudo cp -v ./repoPatch/libsynophoto-plugin-model.so ./repo/libsynophoto-plugin-model.so
+      
+      - name: Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update Synology Photos V${{env.PHOTO_VERSION}}"
+          repository: './repo'
+          
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Files
+          path: ./repo/src/x86/*.so
+          if-no-files-found: error        
+              
+      - name: Delete old workflow
+        uses: Mattraks/delete-workflow-runs@v2
+        with:
+          retain_days: 1
+          keep_minimum_runs: 3
+          
+      - name: Upload Release
+        uses: softprops/action-gh-release@v1
+        with:
+          draft: false
+          prerelease: false
+          body: "Synology Photos V${{ env.PHOTO_VERSION }} only"
+          name: "Patch Photos V${{ env.PHOTO_VERSION }}"
+          tag_name: "${{ env.PHOTO_VERSION }}"
+          files: |
+            ./repo/libsynophoto-plugin-model.so
