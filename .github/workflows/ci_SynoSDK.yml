@@ -41,7 +41,7 @@ jobs:
             cd repoPatch
             sudo chmod -R 777 ./
             cd lazy
-            sudo ./auto_patch_SynoSDK.sh "DS920+" "${SYNO_MAIN_VERSION}" "${SYNO_VERSION}"   
+            sudo ./auto_patch_SynoSDK.sh "${SYNO_MAIN_VERSION}" "${SYNO_VERSION}"   
             cd ../../
             sudo cp -v ./repoPatch/libsynosdk.so.7 ./repo/libsynosdk.so.7
       
