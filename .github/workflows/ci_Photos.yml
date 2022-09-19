@@ -38,13 +38,6 @@ jobs:
           commit_message: "Update Synology Photos V${{env.PHOTO_VERSION}}"
           repository: './repo'
           
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: Files
-          path: ./repo/src/x86/*.so
-          if-no-files-found: error        
-              
       - name: Delete old workflow
         uses: Mattraks/delete-workflow-runs@v2
         with:
