@@ -11,10 +11,10 @@ cd synoesp
 
 output=$(xz -dc < hda1.tgz 2>/dev/null | cpio -idm 2>&1)
 
-echo "show usr syno"
-ls ./usr/syno/
+#echo "show usr syno"
+#ls ./usr/syno/
 echo "Start to extract synoarchive"
-ls ./usr/syno/sbin/
+#ls ./usr/syno/sbin/
 mkdir extract && cd extract
 #ls
 echo "cp file synoarchive"
