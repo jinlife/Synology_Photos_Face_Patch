@@ -10,6 +10,7 @@ Synology Photos Facial Recognition Patch
 1. Download libsynophoto-plugin-model.so and upload it to home folder in Synology
 2. SSH connect to Synology and input below command to patch the file.
 3. Please change 'jinlife' to your own account.
+4. Restart Photos after patch.
 ```bash
 cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/ 
 ```
@@ -24,3 +25,4 @@ cp /volume1/homes/jinlife/libsynosdk.so.7 /usr/lib/
 2. For Photos, it will work perfectly in Shared folder: photo. But you cannot delete picture in personal homes folder. However, you can delete it in FileStation, but it is still inconvienient.
 3. Maybe you can upload photo by App "DS File", it can specify the uploaded folder out of homes.
 4. Anyway, I would suggest to use it for VideoStation only.
+5. Restart DSM after patch.
