@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     env:
-      PHOTO_VERSION: 1.3.1-0326
+      PHOTO_VERSION: 1.3.2-0327
 
     steps:
       - name: Check out the repo
