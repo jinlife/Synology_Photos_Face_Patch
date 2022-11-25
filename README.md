@@ -12,7 +12,7 @@ Synology Photos Facial Recognition Patch
 3. Please change 'jinlife' to your own account.
 4. Restart Photos after patch.
 ```bash
-cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/ 
+cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so.1.0
 ```
 
 ## Misc (libsynosdk.so.7)
