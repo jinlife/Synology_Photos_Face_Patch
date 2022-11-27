@@ -14,7 +14,7 @@ Synology Photos Facial Recognition Patch
 ```bash
 cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/ 
 ```
-If the libsynophoto-plugin-model.so doesn't work, please try libsynophoto-plugin-model.so.1.0 with same pr
+If the libsynophoto-plugin-model.so doesn't work, please try libsynophoto-plugin-model.so.1.0 with same steps.
 
 ## Misc (libsynosdk.so.7)
 The patch for libsynosdk.so.7 will allow remote NFS/CIFS shared folder be used in VideoStation, AudioStation and Photos etc.
