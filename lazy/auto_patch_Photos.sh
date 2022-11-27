@@ -35,6 +35,7 @@ mkdir package
 tar -C package -xf package.tgz
 #ls package
 cp -v ./package/usr/lib/libsynophoto-plugin-model.so ../../../
+cp -v ./package/usr/lib/libsynophoto-plugin-model.so.1.0 ../../../
 
 cd ../../../
 
@@ -43,4 +44,6 @@ ls ../
 echo "find PatchELFSharp2"
 ls ../bin
 ../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-model.so" "_ZN9synophoto6plugin7network9IeNetwork11IsSupportedEv" "B8 00 00 00 00 C3"
+../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-model.so.1.0" "_ZN9synophoto6plugin7network9IeNetwork11IsSupportedEv" "B8 00 00 00 00 C3"
 cp -v libsynophoto-plugin-model.so ../libsynophoto-plugin-model.so
+cp -v libsynophoto-plugin-model.so.1.0 ../libsynophoto-plugin-model.so.1.0

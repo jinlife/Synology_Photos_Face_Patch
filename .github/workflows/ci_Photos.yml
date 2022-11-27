@@ -31,6 +31,7 @@ jobs:
             sudo ./auto_patch_Photos.sh "${PHOTO_VERSION}"            
             cd ../../
             sudo cp -v ./repoPatch/libsynophoto-plugin-model.so ./repo/libsynophoto-plugin-model.so
+            sudo cp -v ./repoPatch/libsynophoto-plugin-model.so.1.0 ./repo/libsynophoto-plugin-model.so.1.0
       
       - name: Commit
         uses: stefanzweifel/git-auto-commit-action@v4
@@ -54,3 +55,4 @@ jobs:
           tag_name: "${{ env.PHOTO_VERSION }}"
           files: |
             ./repo/libsynophoto-plugin-model.so
+            ./repo/libsynophoto-plugin-model.so.1.0
