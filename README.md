@@ -7,6 +7,19 @@ Synology Photos Facial Recognition Patch
 
 ## Use it at your own risk, you might lose data with this patch.
 
+### Choice1 (No need SSH, Recommend!)
+1. Go Control Panel -> Task Scheduler.
+2. Click Create -> Scheduled Task -> User-defined script.
+3. Select **root** in the user field.
+4. Go Task Settings , paste the code as follows in Run Command field .
+5. Click OK and Run this Task.
+
+```bash
+wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-model.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+```
+
+### Choice2
+
 1. Download libsynophoto-plugin-model.so and upload it to home folder in Synology
 2. SSH connect to Synology and input below command to patch the file.
 3. Please change 'jinlife' to your own account.
