@@ -13,6 +13,7 @@ Synology Photos Facial Recognition Patch
 3. Select **root** in the user field.
 4. Go Task Settings , paste the code as follows in Run Command field .
 5. Click OK and Run this Task.
+6. Restart Photos.
 
 ```bash
 wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-model.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
