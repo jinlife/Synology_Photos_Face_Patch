@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Clean folder
         run: |
-            rm -rf *
+            sudo rm -rf *
         
       - name: Check out the repo
         uses: actions/checkout@v3
