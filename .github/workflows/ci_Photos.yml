@@ -6,7 +6,7 @@ on:
 jobs:
 
   build:
-    runs-on: self-hosted
+    runs-on: jinlife-ubuntu-18.04
     env:
       PHOTO_VERSION: 1.4.0-0458
 
