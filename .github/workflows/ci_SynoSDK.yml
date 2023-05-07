@@ -12,6 +12,10 @@ jobs:
       SYNO_VERSION: 42962
 
     steps:
+      - name: Clean folder
+        run: |
+            rm -rf *
+            
       - name: Check out the repo
         uses: actions/checkout@v3
         with:

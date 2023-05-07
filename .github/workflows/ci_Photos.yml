@@ -11,6 +11,10 @@ jobs:
       PHOTO_VERSION: 1.4.0-0458
 
     steps:
+      - name: Clean folder
+        run: |
+            rm -rf *
+        
       - name: Check out the repo
         uses: actions/checkout@v3
         with:
