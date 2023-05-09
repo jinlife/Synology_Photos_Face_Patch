@@ -16,7 +16,7 @@ Synology Photos Facial Recognition Patch
 6. Restart Photos.
 
 ```bash
-wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-model.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so
+wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-model.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so && synopkgctl stop SynologyPhotos && synopkgctl start SynologyPhotos
 ```
 
 ### Choice2
