@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: jinlife-ubuntu-18.04
     env:
-      PHOTO_VERSION: 1.4.0-0458
+      PHOTO_VERSION: 1.5.0-0489
 
     steps:
       - name: Clean folder
