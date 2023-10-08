@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: jinlife-ubuntu-18.04
     env:
-      SYNO_MAIN_VERSION: 7.2
-      SYNO_VERSION: 64570
+      SYNO_MAIN_VERSION: 7.2.1
+      SYNO_VERSION: 69057
 
     steps:
       - name: Clean folder
