@@ -43,7 +43,14 @@ echo "find PatchELFSharp"
 ls ../
 echo "find PatchELFSharp2"
 ls ../bin
+# support face and concept
 ../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-platform.so" "_ZN9synophoto6plugin8platform20IsSupportedIENetworkEv" "B8 00 00 00 00 C3"
 ../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-platform.so.1.0" "_ZN9synophoto6plugin8platform20IsSupportedIENetworkEv" "B8 00 00 00 00 C3"
+# force to support concept
+../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-platform.so" "_ZN9synophoto6plugin8platform18IsSupportedConceptEv" "B8 01 00 00 00 C3"
+../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-platform.so.1.0" "_ZN9synophoto6plugin8platform18IsSupportedConceptEv" "B8 01 00 00 00 C3"
+# force no Gpu
+../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-platform.so" "_ZN9synophoto6plugin8platform23IsSupportedIENetworkGpuEv" "B8 00 00 00 00 C3"
+../bin/PatchELFSharp-Linux64/PatchELFSharp "libsynophoto-plugin-platform.so.1.0" "_ZN9synophoto6plugin8platform23IsSupportedIENetworkGpuEv" "B8 00 00 00 00 C3"
 cp -v libsynophoto-plugin-platform.so ../libsynophoto-plugin-platform.so
 cp -v libsynophoto-plugin-platform.so.1.0 ../libsynophoto-plugin-platform.so.1.0
