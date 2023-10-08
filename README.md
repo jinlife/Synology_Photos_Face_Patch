@@ -14,20 +14,22 @@ Synology Photos Facial Recognition Patch
 4. Go Task Settings , paste the code as follows in Run Command field .
 5. Click OK and Run this Task.
 
+#### Start from V1.6.0-0629, the file was updated from libsynophoto-plugin-**model**.so to libsynophoto-plugin-**platform**.so
+
 ```bash
-wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-model.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-model.so && synopkgctl stop SynologyPhotos && synopkgctl start SynologyPhotos
+wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-platform.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-platform.so && synopkgctl stop SynologyPhotos && synopkgctl start SynologyPhotos
 ```
 
 ### Choice2
 
-1. Download libsynophoto-plugin-model.so and upload it to home folder in Synology
+1. Download libsynophoto-plugin-platform.so and upload it to home folder in Synology
 2. SSH connect to Synology and input below command to patch the file.
 3. Please change 'jinlife' to your own account.
 4. Restart Photos after patch.
 ```bash
-cp /volume1/homes/jinlife/libsynophoto-plugin-model.so /var/packages/SynologyPhotos/target/usr/lib/ 
+cp /volume1/homes/jinlife/libsynophoto-plugin-platform.so /var/packages/SynologyPhotos/target/usr/lib/ 
 ```
-If the libsynophoto-plugin-model.so doesn't work, please try libsynophoto-plugin-model.so.1.0 with same steps.
+If the libsynophoto-plugin-platform.so doesn't work, please try libsynophoto-plugin-platform.so.1.0 with same steps.
 Or I would recommend to patch it by yourself, please take a look at [link](/bin)
 
 ## Misc (libsynosdk.so.7)
