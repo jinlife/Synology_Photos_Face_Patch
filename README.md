@@ -15,7 +15,7 @@ Synology Photos Facial Recognition Patch
 4. Go Task Settings , paste the code as follows in Run Command field .
 5. Click OK and Run this Task.
 
-Start from V1.6.0-0629, the file was updated from libsynophoto-plugin-**model**.so to libsynophoto-plugin-**platform**.so
+As of V1.6.0-0629, the file was updated from libsynophoto-plugin-**model**.so to libsynophoto-plugin-**platform**.so
 
 ```bash
 wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-platform.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-platform.so && synopkgctl stop SynologyPhotos && synopkgctl start SynologyPhotos
