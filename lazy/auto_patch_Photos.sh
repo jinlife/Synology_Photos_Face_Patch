@@ -4,10 +4,10 @@
 photo_version=$1
 
 # download old pat for syno_extract_system_patch # thanks for jumkey's idea.
-# mkdir synoesp
+mkdir synoesp
 # curl --location https://global.download.synology.com/download/DSM/release/7.0.1/42218/DSM_DS3622xs%2B_42218.pat --output oldpat.tar.gz
 # tar -C ./synoesp/ -xf oldpat.tar.gz hda1.tgz
-# cd synoesp
+cd synoesp
 # 
 # output=$(xz -dc < hda1.tgz 2>/dev/null | cpio -idm 2>&1)
 # 
@@ -15,7 +15,7 @@ photo_version=$1
 # #ls ./usr/syno/
 # echo "Start to extract synoarchive"
 # #ls ./usr/syno/sbin/
-# mkdir extract && cd extract
+mkdir extract && cd extract
 # #ls
 # echo "cp file synoarchive"
 # cp -v ../usr/syno/sbin/synoarchive ./
