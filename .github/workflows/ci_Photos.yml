@@ -6,9 +6,9 @@ on:
 jobs:
 
   build:
-    runs-on: jinlife-ubuntu-18.04
+    runs-on: self-hosted
     env:
-      PHOTO_VERSION: 1.7.1-10015
+      PHOTO_VERSION: 1.8.0-10070
 
     steps:
       - name: Clean folder
