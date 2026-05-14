@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: self-hosted
     env:
-      PHOTO_VERSION: 1.8.2-10090
+      PHOTO_VERSION: 1.9.0-10924
 
     steps:
       - name: Clean folder
